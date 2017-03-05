@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#test for chap3
+
+ok="Parsing successful!"
+echo "$ok" > std
+
+make clean
+make
+
+for file in ../testcases/*.tig
+do
+	echo "$file"
+	./a.out $file 2> out
+	diff out std
+	if [ $? != 0 ] 
+	then
+		echo "error: $file\n"
+		rm out std
+		return 1;
+	fi
+done
+rm out std
+echo "NO PROBLEM\n"
+
