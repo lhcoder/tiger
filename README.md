@@ -1,4 +1,4 @@
 # tiger
 exercise for tiger complier
 
-http://blog.csdn.net/lhfl911/article/category/6735561
+see more on http://blog.csdn.net/lhfl911/article/category/6735561
