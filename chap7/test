@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#test for chap3
+
+ok="Parsing successful!"
+echo "$ok" > std
+
+make clean
+make
+
+for file in ../testcases/*.tig
+do
+	clear
+	cat $file
+	echo "$file"
+	./a.out $file 
+	read ts
+done
+
